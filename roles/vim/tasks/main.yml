@@ -1,0 +1,16 @@
+---
+- name: Copy vim conf file
+  copy:
+    src: .vimrc
+    dest: ~/
+  notify: trigger plug install
+
+- name: Create autoload vim dir
+  file:
+    path: ~/.vim/autoload/
+    state: directory
+
+- name: Install vim plug
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: ~/.vim/autoload/

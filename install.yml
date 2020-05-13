@@ -22,6 +22,7 @@
   roles:
     - { role: fish, tags: fish }
     - { role: neovim, tags: neovim }
+    - { role: vim, tags: vim }
     - { role: screen, tags: screen }
     - { role: git, tags: git }
     - { role: userbin, tags: userbin }

@@ -5,43 +5,32 @@
 - sway keybind screens output
 
 # DE
-- try a GTK theme with some transparency
 - tray menu theme and over window
 - firefox menu size when scaling
-- sway border issue : https://github.com/swaywm/sway/issues/5327
+* sway border issue : https://github.com/swaywm/sway/issues/5327
 - transparent notifications ?
-- TRIM and SCRUB detectors
+- waybar module to check last run of zfs-scrub, zfs-trim, backup services
 
 # CLI
 - userbin or fish functions ?
 - up wrapper : 'ix' and 'upfile' = auto-copy
 
 # FIX
-- home PATH is added to root
-- not start tiny in a screen
-- systemctl pager is fucked
-
-# SERVICES
-- QRCODE vpn
-  - backup script as a service
-  - run VPN as a service
-  - why needs to sudo to get prompt for password for services : no need as scripting openvpn
+- copy/paste kitty->firefox remove '\n'
+- notifications never disapear
 
 # ISSUES
-- tiny-irc : https://github.com/osa1/tiny/issues/created_by/eoli3n
-- noto-fonts doesnt work in tiny : https://github.com/osa1/tiny/issues/193
-- waybar urgent styling issue : https://github.com/Alexays/Waybar/issues/704
-- wob styling : https://github.com/francma/wob/issues/38
-- wofi issues : https://todo.sr.ht/~scoopta/wofi
+* tiny-irc : https://github.com/osa1/tiny/issues/created_by/eoli3n
+* waybar urgent styling issue : https://github.com/Alexays/Waybar/issues/704
+* wob styling : https://github.com/francma/wob/issues/38
+* wofi issues : https://todo.sr.ht/~scoopta/wofi
 
 # IMPROVMENTS
-- dynamic username: sed 's/user/{{ user }}/g' and use templating
+* try a GTK theme with some transparency
+- readd terminfo role
+- change theme in config file : dynamic waybar colors
 
 #TEST
-- repair travis runs
-- wf-recorder
-
-# SNAPSHOTS
-- neovim with kitty config file
-- screenshots with wifi and on battery
-- firefox tabliss
+* wf-recorder
+* systemctl pager is fucked, still ?
+* ssh-agent after reinstall

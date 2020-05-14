@@ -22,6 +22,7 @@ RUN pacman -Syu --noconfirm \
       autoconf \
       gettext \
       patch \
+      rsync \
       xorg-server-xephyr 
 ENV PATH="${PATH}:/usr/bin/core_perl"
 # Project deps
@@ -29,6 +30,7 @@ RUN pacman -S --noconfirm \
       ansible \
       jshon \
       git \
+      neovim \
       fish
 # Fix tmp dir perms
 RUN chmod 1777 /tmp
@@ -41,7 +43,5 @@ RUN echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 USER user
 WORKDIR /home/user/
 ENV LANG="fr_FR.UTF-8"
-RUN mkdir dotfiles
-COPY . dotfiles/
-RUN cd dotfiles; ansible-playbook -i docker/archlinux/hosts install.yml | tee ansible.log
-ENTRYPOINT /bin/bash
+COPY . .
+CMD ["/bin/bash"]

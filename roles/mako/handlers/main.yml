@@ -1,0 +1,5 @@
+---
+
+- name: reload mako
+  shell: makoctl reload
+  when: ansible_virtualization_role == "host" and mako_running is succeeded

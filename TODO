@@ -1,36 +1,30 @@
 # DISPLAY
-- hardware acceleration : firefox, alacritty, kitty, mpv
+- hardware acceleration : firefox, kitty, mpv
 - mpv still ok with wayland ?
 - configure kanshi auto output
 - sway keybind screens output
-
-# DE
-- tray menu theme and over window
-- firefox menu size when scaling
-* sway border issue : https://github.com/swaywm/sway/issues/5327
-- transparent notifications ?
-- waybar module to check last run of zfs-scrub, zfs-trim, backup services
 
 # CLI
 - userbin or fish functions ?
 - up wrapper : 'ix' and 'upfile' = auto-copy
 
 # FIX
-- copy/paste kitty->firefox remove '\n'
-- notifications never disapear
+- copy/paste kitty->firefox remove '\n' ?
 
 # ISSUES
 * tiny-irc : https://github.com/osa1/tiny/issues/created_by/eoli3n
 * waybar urgent styling issue : https://github.com/Alexays/Waybar/issues/704
 * wob styling : https://github.com/francma/wob/issues/38
 * wofi issues : https://todo.sr.ht/~scoopta/wofi
+* tray menu theme and over window : https://github.com/Alexays/Waybar/issues/21#issuecomment-628648061
+* sway border issue : https://github.com/swaywm/sway/issues/5327
+* firefox menu size when scaling : https://bugzilla.mozilla.org/show_bug.cgi?id=1638168
 
 # IMPROVMENTS
 * try a GTK theme with some transparency
-- readd terminfo role
-- change theme in config file : dynamic waybar colors
+- dynamic waybar colors
+- rclone mount service
 
 #TEST
 * wf-recorder
-* systemctl pager is fucked, still ?
 * ssh-agent after reinstall

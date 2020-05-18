@@ -1,4 +1,4 @@
-#localhost ansible_connection=local ansible_user=user
+#localhost ansible_connection=local
 [cli]
 [desktop]
 localhost ansible_connection=local ansible_user=matthewschrader

@@ -9,7 +9,9 @@
 - up wrapper : 'ix' and 'upfile' = auto-copy
 
 # FIX
+- copy/paste are fucked
 - copy/paste kitty->firefox remove '\n' ?
+- change kitty block char when unused term
 
 # ISSUES
 * tiny-irc : https://github.com/osa1/tiny/issues/created_by/eoli3n
@@ -24,7 +26,9 @@
 * try a GTK theme with some transparency
 - dynamic waybar colors
 - rclone mount service
+- import pictures in shotwell
 
 #TEST
 * wf-recorder
-* ssh-agent after reinstall
+- waybar modules systemd, retest !
+- launch kitty in xwayland mode to be able to share window 

@@ -5,3 +5,6 @@ set -x PAGER 'most'
 set -x PATH $PATH $HOME/Android/Sdk/platform-tools $HOME/Android/Sdk/tools $HOME/bin
 set -x ANDROID_SDK_ROOT $HOME/Android/Sdk
 set -gx SYSTEMD_PAGER 'less'
+
+# Start starfish prompt
+starship init fish | source

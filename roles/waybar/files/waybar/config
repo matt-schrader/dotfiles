@@ -2,9 +2,9 @@
     "layer": "bottom",
     "position": "top",
 
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": [],
-    "modules-right": ["pulseaudio", "backlight", "network", "custom/vpn", "custom/pkg", "battery", "clock"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window", "custom/right-arrow-dark"],
+    "modules-center": ["custom/left-arrow-dark", "clock#1", "clock#2", "clock#3", "custom/right-arrow-dark"],
+    "modules-right": ["custom/left-arrow-dark", "pulseaudio", "space", "backlight", "network", "custom/vpn", "custom/pkg", "battery"],
     "sway/mode": {
         "format": " {}"
     },
@@ -14,11 +14,6 @@
     },
     "sway/window": {
         "max-length": 80,
-        "tooltip": false
-    },
-    "clock": {
-        "interval": 1,
-        "format": "{:%d<span foreground='#929292'>%m</span><span foreground='#606060'>%y</span> %H<span foreground='#929292'>%M</span><span foreground='#606060'>%S</span>}",
         "tooltip": false
     },
     "battery": {
@@ -67,6 +62,30 @@
         "format-icons": [""],
         "on-scroll-up": "brightnessctl set +2% && brightnessctl -m | cut -d',' -f4 | tr -d '%' > $SWAYSOCK.wob",
         "on-scroll-down": "brightnessctl set 2%- && brightnessctl -m | cut -d',' -f4 | tr -d '%' > $SWAYSOCK.wob"
+    },
+    "custom/left-arrow-dark": {
+        "format": "",
+        "tooltip": false
+    },
+		"custom/right-arrow-dark": {
+        "format": "",
+        "tooltip": false
+    },
+    "clock#1": {
+        "format": "{:%a}",
+        "tooltip": false
+    },
+    "clock#2": {
+        "format": "{:%m/%d}",
+        "tooltip": false
+    },
+    "clock#3": {
+        "format": "{:%I:%M%p}",
+        "tooltip": false
+    },
+    "space": {
+        "format": "",
+        "tooltip": false
     }
 }, {
     "layer": "bottom",

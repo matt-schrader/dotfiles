@@ -1,6 +1,7 @@
 /* colorscheme */
-@define-color background rgba(34, 34, 34, 0.9); 
-@define-color active rgba(68, 68, 68, 0.8);
+@define-color container rgba(0, 0, 0, 0.0);
+@define-color background rgba(14, 14, 14, 1); 
+@define-color active rgba(0, 0, 0, 1);
 @define-color warning rgba(243, 249, 157, 1);
 @define-color alert rgba(255, 92, 87, 1);
 @define-color white rgba(239, 240, 235, 1);
@@ -26,10 +27,19 @@
 
 window {
     color:      @white;
-    background: @background;
+    font-size: 14px;
+    background: @container;
 }
 
 #workspaces {
+    padding-right: 30px;
+    background: @background;
+}
+#mode {
+    background: @background;
+}
+#window {
+    background: @background;
     padding-right: 30px;
 }
 
@@ -55,7 +65,7 @@ window {
 }
 
 #mode, #battery, #cpu, #memory, #network, #pulseaudio, #backlight, #custom-backup, #custom-pkg, #custom-storage, #custom-vpn, #custom-zfs-trim, #custom-zfs-scrub, #custom-systemd, #temperature, #clock {
-    margin:     0px 16px 0px 0px;
+    padding:     0px 8px 0px 8px;
 }
 
 #tray, #custom-spotify {
@@ -63,11 +73,11 @@ window {
 }
 
 #clock {
-    border-bottom: 2px solid @blue;
+    color: @white;
 }
 
 #network {
-    border-bottom: 2px solid @purple;
+    color: @purple;
 }
 
 #network.speed {
@@ -75,35 +85,35 @@ window {
 }
 
 #battery {
-    border-bottom: 2px solid @yellow;
+    color: @yellow;
 }
 
 #custom-pkg {
-    border-bottom: 2px solid @red;
+    color: @red;
 }
 
 #pulseaudio {
-    /*border-bottom: 2px solid @green;*/
+    color: @green;
 }
 
 #backlight {
-    /*border-bottom: 2px solid @alert;*/
+    color: @alert;
 }
 
 #custom-vpn {
-    border-bottom: 2px solid @cyan;
+    color: @cyan;
 }
 
 #battery.warning {
-   color:       rgba(255, 210, 4, 1);
+   color: @yellow;
 }
 
 #battery.critical {
-    color:      rgba(238, 46, 36, 1);
+    color: @red;
 }
 
 #battery.charging {
-    color:      rgba(217, 216, 216, 1);
+    color: @green;
 }
 
 #custom-storage.warning {
@@ -113,3 +123,12 @@ window {
 #custom-storage.critical {
     color: @alert;
 } 
+
+#pulseaudio, #backlight, #network, #custom-vpn, #battery, #clock {
+    background: @background;
+}
+
+#custom-right-arrow-dark, #custom-left-arrow-dark {
+    color: @background;
+}
+

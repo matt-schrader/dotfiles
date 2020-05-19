@@ -38,3 +38,8 @@
   copy:
     src: user-dirs.dirs
     dest: ~/.config/
+
+- name: copy background
+  copy:
+    src: background.jpg
+    dest: ~/.config/sway/

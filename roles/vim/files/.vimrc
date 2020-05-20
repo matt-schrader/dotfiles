@@ -603,3 +603,4 @@ nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
 " hi  DiffDelete                              cterm=NONE  ctermfg=1  ctermbg=0  guifg=#dc322f  guibg=#073642  gui=NONE
 " hi  DiffText                                cterm=NONE  ctermfg=4  ctermbg=0  guifg=#268bd2  guibg=#073642  guisp=#268bd2  gui=NONE
 
+hi Normal guibg=NONE ctermbg=NONE

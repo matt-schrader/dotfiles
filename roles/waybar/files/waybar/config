@@ -18,10 +18,10 @@
     },
     "battery": {
         "format-icons": ["", "", "", "", ""],
-        "format": "<span foreground='#929292'>{icon}</span> {capacity}%",
-        "format-charging": "<span foreground='#929292'>{icon}</span> {capacity}%",
-        "format-discharging": "<span foreground='#929292'>{icon}</span> {time}",
-        "format-full": "<span foreground='#929292'>{icon}</span> {capacity}%",
+        "format": "<span>{icon}</span> {capacity}%",
+        "format-charging": "<span>{icon}</span> {capacity}%",
+        "format-discharging": "<span>{icon}</span> {time}",
+        "format-full": "<span>{icon}</span> {capacity}%",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -35,30 +35,30 @@
         "exec": "~/.config/waybar/modules/pkg.sh"
     },
     "network": {
-        "format-wifi": "<span foreground='#929292'></span> {essid} <span foreground='#929292'>{signalStrength}%</span>",
-        "format-ethernet": "<span foreground='#929292'></span> {ifname}",
+        "format-wifi": "<span></span> {essid} <span>{signalStrength}%</span>",
+        "format-ethernet": "<span></span> {ifname}",
         "format-disconnected": "",
         "tooltip": false
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": "<span foreground='#929292'></span>",
+        "format-muted": "<span></span>",
         "format-icons": {
-            "default": ["<span foreground='#929292'></span>"],
-            "headphones": ["<span foreground='#929292'></span>"]
+            "default": ["<span></span>"],
+            "headphones": ["<span></span>"]
         },
         "on-scroll-up": "pamixer -ui 1 && pamixer --get-volume > $SWAYSOCK.wob",
         "on-scroll-down": "pamixer -ud 1 && pamixer --get-volume > $SWAYSOCK.wob",
         "tooltip": false
     },
     "custom/vpn": {
-        "format": "<span foreground='#929292'></span> vpn",
+        "format": "<span></span> vpn",
         "interval": 5,
         "exec" : "echo a",
         "exec-if" : "systemctl is-active --quiet vpn"
     },
     "backlight": {
-        "format": "<span foreground='#929292'>{icon}</span> {percent}%",
+        "format": "<span>{icon}</span> {percent}%",
         "format-icons": [""],
         "on-scroll-up": "brightnessctl set +2% && brightnessctl -m | cut -d',' -f4 | tr -d '%' > $SWAYSOCK.wob",
         "on-scroll-down": "brightnessctl set 2%- && brightnessctl -m | cut -d',' -f4 | tr -d '%' > $SWAYSOCK.wob"
@@ -95,59 +95,59 @@
     "modules-center": ["network#speed"],
     "modules-right": ["custom/systemd", "custom/backup", "custom/zfs-trim", "custom/zfs-scrub", "temperature", "custom/storage", "cpu", "memory" ],
     "custom/spotify": {
-        "format": "<span foreground='#929292'></span> {}",
+        "format": "<span></span> {}",
         "interval": 1,
         "exec": "~/.config/waybar/modules/spotify.sh",
         "exec-if": "pgrep spotify"
     },
     "network#speed": {
-        "format-wifi": "<span foreground='#929292'></span> {bandwidthDownOctets} <span foreground='#929292'></span> {bandwidthUpOctets}",
-        "format-ethernet": "<span foreground='#929292'></span> {bandwidthDownOctets} <span foreground='#929292'></span> {bandwidthUpOctets}",
+        "format-wifi": "<span></span> {bandwidthDownOctets} <span></span> {bandwidthUpOctets}",
+        "format-ethernet": "<span></span> {bandwidthDownOctets} <span></span> {bandwidthUpOctets}",
         "interval": 1
     },
     "temperature": {
-        "format": "<span foreground='#929292'></span> {temperatureC}°C",
+        "format": "<span></span> {temperatureC}°C",
         "thermal-zone": 1,
         "critical-threshold": 60,
-	    "format-critical": "<span foreground='#ff5c57'></span> {temperatureC}°C"
+	    "format-critical": "<span></span> {temperatureC}°C"
     },
     "custom/storage": {
-        "format": "<span foreground='#929292'></span> {}%",
+        "format": "<span></span> {}%",
         "return-type": "json",
         "interval": 60,
         "exec": "~/.config/waybar/modules/storage.sh /"
     },
     "custom/zfs-trim": {
-        "format": " <span foreground='#f3f99d'>trimming...</span>",
+        "format": " <span>trimming...</span>",
         "interval": 5,
         "exec": "echo a",
         "exec-if": "systemctl is-active --quiet zfs-trim"
     },
     "custom/zfs-scrub": {
-        "format": " <span foreground='#f3f99d'>scrubbing...</span>",
+        "format": " <span>scrubbing...</span>",
         "interval": 5,
         "exec": "echo a",
         "exec-if": "systemctl is-active --quiet zfs-scrub"
     },
     "custom/backup": {
-        "format": " <span foreground='#f3f99d'>backup...</span>",
+        "format": " <span>backup...</span>",
         "interval": 5,
         "exec": "echo a",
         "exec-if": "systemctl is-active --quiet backup"
     },
     "custom/systemd": {
-        "format": "<span foreground='#ff5c57'> {}</span>",
+        "format": "<span> {}</span>",
         "interval": 5,
         "exec": "~/.config/waybar/modules/systemd.sh",
         "exec-if": "~/.config/waybar/modules/systemd.sh"
     },
     "cpu": {
         "interval": 3,
-        "format": "<span foreground='#929292'></span> {usage}%"
+        "format": "<span></span> {usage}%"
     },
     "memory": {
         "interval": 3,
-        "format": "<span foreground='#929292'></span> {percentage}%"
+        "format": "<span></span> {percentage}%"
     },
     "tray": {
         "icon-size": 18

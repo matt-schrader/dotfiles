@@ -1,67 +1,50 @@
 /* colorscheme */
-@define-color container rgba(0, 0, 0, 0.0);
-@define-color background rgba(14, 14, 14, 1); 
-@define-color active rgba(0, 0, 0, 1);
-@define-color warning rgba(243, 249, 157, 1);
-@define-color alert rgba(255, 92, 87, 1);
-@define-color white rgba(239, 240, 235, 1);
-@define-color darkgrey rgba(73, 73, 73, 1);
-@define-color grey rgba(146, 146, 146, 1);
+/* new scheme
+#e4ba4a goldenrod - yellow
+#cb5d33 peru - orange
+#293a4b dark slate gray
+#418790 steel blue - medium blue
+#55a9a1 cadet blue - light blue
+*/
 
-@define-color red rgba(255, 92, 87, 1);
-@define-color yellow rgba(243, 249, 157, 1);
-@define-color blue rgba(10, 108, 245, 1);
-@define-color purple rgba(159, 120, 255, 1);
-@define-color green rgba(90, 247, 142, 1);
-@define-color cyan rgba(154, 237, 254, 1);
+@define-color container rgba(0, 0, 0, 0.0);
+@define-color primary-background #55a9a1;
+@define-color secondary-background #418790;
+@define-color primary-text #293a4b;
+@define-color highlight #cb5d33;
+@define-color secondary-highlight #e4ba4a;
 
 * {
     border:        none;
     border-radius: 0;
     font-family:   "{{ font }}", "Font Awesome 5 Free Regular", "Font Awesome 5 Free Solid", "Font Awesome 5 Brands";
-    font-size:     12px;
+    font-size:     14px;
     box-shadow:    none;
     text-shadow:   none;
     transition-duration: 0s;
 }
 
 window {
-    color:      @white;
-    font-size: 14px;
     background: @container;
 }
 
-#workspaces {
-    padding-right: 30px;
-    background: @background;
-}
-#mode {
-    background: @background;
-}
-#window {
-    background: @background;
-    padding-right: 30px;
+#workspaces, #mode, #window, #pulseaudio, #backlight, #network, #custom-vpn, #battery, #clock, #custom-pkg {
+    background: @primary-background;
+    color: @primary-text;
 }
 
 #workspaces button {
-    background: transparent;
-    padding:    0 10px;
-    color:   @white;
-    min-width:  20px;
-    border-top: 1px solid transparent;
-    border-bottom: 2px solid transparent;
-}
+	padding: 0 10px;
+ }
 
-#workspaces button.visible {
-    color:      @white;
+#workspaces button.visible{
+    color: @highlight;
 }
 #workspaces button.focused {
-    border-top: 1px solid @active;
-    border-bottom: 2px solid @yellow;
-    background: @active;
+    color: @highlight;
 }
 #workspaces button.urgent {
-    color:      @alert;
+    color:      @secondary-highlight;
 }
 
 #mode, #battery, #cpu, #memory, #network, #pulseaudio, #backlight, #custom-backup, #custom-pkg, #custom-storage, #custom-vpn, #custom-zfs-trim, #custom-zfs-scrub, #custom-systemd, #temperature, #clock {
@@ -72,63 +55,9 @@ window {
     margin:     0px 0px 0px 16px;
 }
 
-#clock {
-    color: @white;
-}
-
-#network {
-    color: @purple;
-}
-
-#network.speed {
-    border-bottom: 0px;
-}
-
-#battery {
-    color: @yellow;
-}
-
-#custom-pkg {
-    color: @red;
-}
-
-#pulseaudio {
-    color: @green;
-}
-
-#backlight {
-    color: @alert;
-}
-
-#custom-vpn {
-    color: @cyan;
-}
-
-#battery.warning {
-   color: @yellow;
-}
-
-#battery.critical {
-    color: @red;
-}
-
-#battery.charging {
-    color: @green;
-}
-
-#custom-storage.warning {
-    color: @warning;
-}
-
-#custom-storage.critical {
-    color: @alert;
-} 
-
-#pulseaudio, #backlight, #network, #custom-vpn, #battery, #clock {
-    background: @background;
-}
 
 #custom-right-arrow-dark, #custom-left-arrow-dark {
-    color: @background;
+    color: @primary-background;
+		font-size: 24;
 }
 

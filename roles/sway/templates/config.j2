@@ -164,6 +164,8 @@ bindsym $mod+Shift+0 move container to workspace $tag10
 
 # floatings
 for_window [title="Images de Variety"] floating enable, border pixel 1, move left 647px
+for_window [app_id="firefox" title="^Picture-in-Picture$"] \
+    floating enable, move position 877 450, sticky enable
 
 # assign and focus xwayland
 assign [class="Spotify"] $tag5

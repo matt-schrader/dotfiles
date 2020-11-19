@@ -1,0 +1,12 @@
+- name: enable lightdm service
+  become: yes
+  systemd:
+    name: lightdm.service
+    enabled: yes
+    masked: no
+
+- name: start lightdm service
+  become: yes
+  systemd:
+    name: lightdm.service
+    state: started

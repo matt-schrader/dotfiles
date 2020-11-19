@@ -13,10 +13,15 @@
     src: config.j2
     dest: ~/.config/sway/config
 
-- name: autostart sway
-  copy:
-    src: sway.fish
-    dest: ~/.config/fish/conf.d/
+    #- name: autostart sway
+    #  copy:
+    #    src: sway.fish
+    #    dest: ~/.config/fish/conf.d/
+
+- name: remove sway autostart
+  file:
+    path: ~/.config/fish/conf.d/sway.fish
+    state: absent
 
 - name: create swaylock dir config
   file:

@@ -46,3 +46,6 @@
     - role: kitty
       tags: kitty
       when: ansible_user_id != 'root'
+    - role: ukui
+      tags: ukui
+      when: ansible_user_id != 'root'
